@@ -19,7 +19,7 @@
       <label bordercolor="0x000000" textcolor="0x000000" background="1" backgroundcolor="0xffffff" backgroundalpha="1" borderradius="1" borderalpha="1" textalpha="1" border="1" width="180" wordwrap="1" height="20" enabled="1"/>
       <polystyle bordercolor="0x0000ff" backgroundcolor="0x0000ff" backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0"/>
       <hotspot title="Lican Ray (18km)" tilt="-0.8" id="Point07" pan="-169.4" skinid="ht_tag_georeferencia_b" url="" description="" target="_blank"/>
-      <hotspot title="lotecito" tilt="-50.44" id="htLote01" pan="-345.03" skinid="ht_disponible" url="" description="&lt;b>Lote 1 &lt;br>&#xA;Superficie: &lt;/b>0.50 ha" target=""/>
+      <hotspot title="lotecito" tilt="-50.44" id="htLote01" pan="-345.03" skinid="ht_disponible" url="" description="&lt;b>lotecito&lt;/b>&#xA;      &lt;br>&#xA;      &lt;b>Descripción:&lt;/b> bonito &#xA;      &lt;br>&#xA;      &lt;b>Superficie:&lt;/b> 0.50 ha&#xA;      &lt;br>&#xA;      &lt;b>Precio:&lt;/b> $150/CLP&#xA;      " target=""/>
       <hotspot title="lotecito" tilt="-52.8" id="htLote02" pan="-355.39" skinid="ht_disponible" url="" description="&lt;b>lotecito&lt;/b>&#xA;      &lt;br>&#xA;      &lt;b>Descripción:&lt;/b> bonito &#xA;      &lt;br>&#xA;      &lt;b>Superficie:&lt;/b> 0.50 ha&#xA;      &lt;br>&#xA;      &lt;b>Precio:&lt;/b> $150/CLP&#xA;      " target="_blank"/>
     </hotspots>
     <media/>
