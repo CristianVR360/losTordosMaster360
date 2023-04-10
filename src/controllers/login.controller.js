@@ -24,4 +24,15 @@ const getJWT = async (req, res) => {
   res.json({ token });
 };
 
-module.exports = { getJWT };
+const verifyJwt = (req, res) => {
+  const { token } = req.body;
+  try {
+    jwt.verify(token, process.env.MY_SECRET_KEY_JWT);
+    res.status(200).json({ isValidToken: true });
+  } catch (error) {
+    console.error('Invalid Token', error.message);
+    res.status(403).json({ isValidToken: false });
+  }
+};
+
+module.exports = { getJWT, verifyJwt };

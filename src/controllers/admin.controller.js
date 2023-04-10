@@ -1,4 +1,7 @@
-const { updateHotspotAttributes } = require('../helpers/modifyXML');
+const {
+  updateHotspotAttributes,
+  getAllHotspots,
+} = require('../helpers/modifyXML');
 
 const updateLot = async (req, res) => {
   const {
@@ -35,4 +38,13 @@ const updateLot = async (req, res) => {
   }
 };
 
-module.exports = { updateLot };
+const getLots = async (req, res) => {
+  try {
+    const hotspots = await getAllHotspots();
+    res.status(200).json({ hotspots });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+module.exports = { updateLot, getLots };

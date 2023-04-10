@@ -36,7 +36,7 @@ const updateHotspotAttributes = async (
       <br>
       <b>Descripción:</b> ${description} 
       <br>
-      <b>Superficie:</b> ${surface} ha
+      <b>Superficie:</b> ${surface}
       <br>
       <b>Precio:</b> $${price}/CLP
       `;
@@ -54,4 +54,46 @@ const updateHotspotAttributes = async (
   }
 };
 
-module.exports = { updateHotspotAttributes };
+const getAllHotspots = async () => {
+  try {
+    const data = await fs.promises.readFile(xmlFilePath, 'utf-8');
+    const result = await xml2js.parseStringPromise(data);
+    const hotspots = result.tour.panorama[0].hotspots[0].hotspot;
+
+    const hotspotArray = hotspots
+      .filter((hotspot) => hotspot.$.description)
+      .map((hotspot) => {
+        const decodedDescription = decode(hotspot.$.description);
+        const descriptionParts = decodedDescription.split('<br>');
+        const title = descriptionParts[0].replace(/<.*?>/g, '').trim();
+        const surface = descriptionParts[2]
+          .replace(/<.*?>/g, '')
+          .trim()
+          .replace('Superficie: ', '');
+        const price = descriptionParts[3]
+          .replace(/<.*?>/g, '')
+          .trim()
+          .replace(/[^0-9.]/g, '');
+        const description = descriptionParts[1]
+          .replace(/<.*?>/g, '')
+          .trim()
+          .replace('Descripción: ', '');
+
+        return {
+          loteId: hotspot.$.id,
+          title,
+          surface,
+          price,
+          skinId: hotspot.$.skinid,
+          description,
+        };
+      });
+
+    return hotspotArray;
+  } catch (error) {
+    console.error(error);
+    return error.message;
+  }
+};
+
+module.exports = { updateHotspotAttributes, getAllHotspots };

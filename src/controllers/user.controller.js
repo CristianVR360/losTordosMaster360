@@ -15,14 +15,19 @@ const postUsers = async (req, res) => {
 };
 
 const putUsers = async (req, res) => {
-  const { id } = req.params;
   const { _id, password, email, secret_key, ...rest } = req.body;
 
   if (password) {
     const salt = bcryptjs.genSaltSync();
     rest.password = bcryptjs.hashSync(password, salt);
   }
-  const user = await User.findByIdAndUpdate(id, rest, { new: true });
+  const user = await User.findOneAndUpdate(email, rest);
+
+  if (!user) {
+    res.status(404).json({
+      message: 'User not found',
+    });
+  }
 
   res.status(200).json(user);
 };

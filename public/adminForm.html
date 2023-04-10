@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">Lote360</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/">Inicio</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <button id="logoutButton" type="submit" class="btn btn-danger">
+                Logout
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="d-flex align-items-center justify-content-center"
+      style="height: 93vh"
+    >
+      <form id="admin-form" class="w-75">
+        <div class="form-group">
+          <label for="loteId" class="control-label">ID Lote</label>
+          <select class="form-control" id="loteId">
+            <option value="1" selected></option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="title" class="control-label">Nombre del lote</label>
+          <input
+            type="text"
+            class="form-control"
+            id="title"
+            name="title"
+            placeholder="Nuevo nombre del lote"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="surface" class="control-label">Superficie</label>
+          <input
+            type="text"
+            class="form-control"
+            id="surface"
+            name="surface"
+            placeholder="0.50"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="price" class="control-label">Precio</label>
+          <input
+            class="form-control"
+            id="price"
+            name="price"
+            placeholder="52.000.000"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="control-label" for="status">
+            <input type="checkbox" id="status" name="status" />
+            Disponibilidad
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label for="description" class="control-label">Descripción</label>
+          <textarea
+            class="form-control form-control-lg"
+            id="description"
+            name="description"
+            rows="5"
+            placeholder="Tiene un un cesped verde"
+          ></textarea>
+        </div>
+
+        <br />
+
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Modificar</button>
+        </div>
+      </form>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/scriptAdmin.js"></script>
+  </body>
+</html>

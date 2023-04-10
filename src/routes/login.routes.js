@@ -1,7 +1,7 @@
 const { Router } = require('express');
 const { check } = require('express-validator');
 
-const { getJWT } = require('../controllers/login.controller');
+const { getJWT, verifyJwt } = require('../controllers/login.controller');
 
 const router = Router();
 
@@ -14,5 +14,7 @@ router.post(
   ],
   getJWT
 );
+
+router.post('/verify', verifyJwt);
 
 module.exports = router;

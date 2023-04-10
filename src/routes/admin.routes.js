@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const { updateLot } = require('../controllers/admin.controller');
+const { updateLot, getLots } = require('../controllers/admin.controller');
 const {
   authenticateJWT,
   authorizeAdmin,
@@ -7,6 +7,8 @@ const {
 
 const router = Router();
 
-router.put('/', authenticateJWT, authorizeAdmin, updateLot);
+router.use('/', authenticateJWT, authorizeAdmin);
+router.put('/', updateLot);
+router.get('/', getLots);
 
 module.exports = router;

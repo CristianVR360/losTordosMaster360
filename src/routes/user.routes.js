@@ -24,6 +24,6 @@ router.post(
   postUsers
 );
 
-router.put('/:id', isSecretKey, putUsers);
+router.put('/', isSecretKey, putUsers);
 
 module.exports = router;
