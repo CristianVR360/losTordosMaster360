@@ -42,13 +42,13 @@
 
   function changeDisponibility() {
     const loteId = this.value;
-    const hotspot = hotspotsXML.find((hotspot) => hotspot.loteId === loteId);
+    const hotspot = hotspotsXML.find((hotspot) => hotspot.id === loteId);
 
     if (!hotspot) document.getElementById('status').checked = false;
 
     if (hotspot) {
       document.getElementById('status').checked =
-        hotspot.skinId === 'ht_disponible' ? true : false;
+        hotspot.skinid === 'ht_disponible' ? true : false;
     }
   }
 
@@ -65,19 +65,16 @@
 
   const getAllFormValues = () => {
     const loteId = document.getElementById('loteId').value;
-    const title = document.getElementById('title').value;
-    const surface = document.getElementById('surface').value;
+    // const title = document.getElementById('title').value;
+    // const surface = document.getElementById('surface').value;
     const price = document.getElementById('price').value;
     const status = document.getElementById('status').checked;
-    const description = document.getElementById('description').value;
+    // const description = document.getElementById('description').value;
 
     return {
       lotId: loteId,
-      title,
-      surface,
-      price,
       status,
-      description,
+      info: `$${price}`,
     };
   };
 
@@ -159,10 +156,11 @@
       .then(({ hotspots }) => {
         // Crea un option para cada hotspot
         hotspotsXML = hotspots;
+
         hotspots.forEach((hotspot) => {
           const option = document.createElement('option');
-          option.value = hotspot.loteId;
-          option.textContent = hotspot.title + ' ( ' + hotspot.loteId + ' )';
+          option.value = hotspot.id;
+          option.textContent = hotspot.id;
           hotspotsSelect.appendChild(option);
         });
       })

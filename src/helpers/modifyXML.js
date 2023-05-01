@@ -1,46 +1,36 @@
 const fs = require('fs');
 const path = require('path');
 const xml2js = require('xml2js');
-const { decode } = require('html-entities');
+// const { decode } = require('html-entities');
 
 const xmlFilePath = path.join(__dirname, '../../public/pano.xml');
 
-const updateHotspotAttributes = async (
-  hotspotId,
-  status,
-  { newTitle = '', newDescription = '', newSurface = '', newPrice = '' }
-) => {
+const getData = async () => {
   try {
     const data = await fs.promises.readFile(xmlFilePath, 'utf-8');
     const result = await xml2js.parseStringPromise(data);
+    return result;
+  } catch (error) {
+    console.error(error);
+    return error.message;
+  }
+};
+
+const updateHotspotAttributes = async (hotspotId, status, newInfo) => {
+  try {
+    const result = await getData();
     const hotspot = result.tour.panorama[0].hotspots[0].hotspot.find(
-      (h) => h.$.id === hotspotId
+      (h) => h.$.id.toLowerCase() === hotspotId
     );
-    if (hotspot) {
-      hotspot.$.title = newTitle.length !== 0 ? newTitle : hotspot.$.title;
+    const { userdata } = result.tour.panorama.find(
+      ({ userdata }) => userdata[0].$.customnodeid === hotspotId
+    );
+
+    if (hotspot && userdata) {
+      // hotspot.$.title = newTitle.length !== 0 ? newTitle : hotspot.$.title;
       hotspot.$.skinid = status ? 'ht_disponible' : 'ht_noDisponible';
-
-      const decodedDescription = decode(hotspot.$.description);
-      const descriptionParts = decodedDescription.split('<br>');
-      const titlePart = descriptionParts[0].replace(/<.*?>/g, '');
-      const descriptionPart = descriptionParts[1].replace(/<.*?>/g, '');
-      const superficiePart = descriptionParts[2].replace(/<.*?>/g, '');
-      const precioPart = descriptionParts[3].replace(/<.*?>/g, '');
-
-      const title = newTitle || titlePart;
-      const surface = newSurface || superficiePart;
-      const price = newPrice || precioPart;
-      const description = newDescription || descriptionPart;
-
-      hotspot.$.description = `<b>${title}</b>
-      <br>
-      <b>Descripción:</b> ${description} 
-      <br>
-      <b>Superficie:</b> ${surface}
-      <br>
-      <b>Precio:</b> $${price}/CLP
-      `;
-
+      userdata[0].$.tags = status ? 'mostrar' : 'mostrar|nodisponible';
+      userdata[0].$.info = !!newInfo ? newInfo : userdata[0].$.info;
       const builder = new xml2js.Builder();
       const xml = builder.buildObject(result);
       await fs.promises.writeFile(xmlFilePath, xml);
@@ -56,38 +46,31 @@ const updateHotspotAttributes = async (
 
 const getAllHotspots = async () => {
   try {
-    const data = await fs.promises.readFile(xmlFilePath, 'utf-8');
-    const result = await xml2js.parseStringPromise(data);
+    const result = await getData();
+
     const hotspots = result.tour.panorama[0].hotspots[0].hotspot;
 
     const hotspotArray = hotspots
-      .filter((hotspot) => hotspot.$.description)
+      .filter(
+        (hotspot) =>
+          hotspot.$.id &&
+          hotspot.$.tilt &&
+          hotspot.$.url &&
+          hotspot.$.skinid &&
+          hotspot.$.title &&
+          hotspot.$.pan
+      )
       .map((hotspot) => {
-        const decodedDescription = decode(hotspot.$.description);
-        const descriptionParts = decodedDescription.split('<br>');
-        const title = descriptionParts[0].replace(/<.*?>/g, '').trim();
-        const surface = descriptionParts[2]
-          .replace(/<.*?>/g, '')
-          .trim()
-          .replace('Superficie: ', '');
-        const price = descriptionParts[3]
-          .replace(/<.*?>/g, '')
-          .trim()
-          .replace(/[^0-9.]/g, '');
-        const description = descriptionParts[1]
-          .replace(/<.*?>/g, '')
-          .trim()
-          .replace('Descripción: ', '');
-
         return {
-          loteId: hotspot.$.id,
-          title,
-          surface,
-          price,
-          skinId: hotspot.$.skinid,
-          description,
+          id: hotspot.$.id,
+          tilt: hotspot.$.tilt,
+          url: hotspot.$.url,
+          skinid: hotspot.$.skinid,
+          title: hotspot.$.title,
+          pan: hotspot.$.pan,
         };
-      });
+      })
+      .sort((a, b) => +a.title - +b.title);
 
     return hotspotArray;
   } catch (error) {
@@ -96,4 +79,65 @@ const getAllHotspots = async () => {
   }
 };
 
-module.exports = { updateHotspotAttributes, getAllHotspots };
+// const updateHotspotSkin = async (hotspotId, status) => {
+//   try {
+//     const result = await getData();
+//     const hotspot = result.tour.panorama[0].hotspots[0].hotspot
+//       .filter(
+//         (hotspot) =>
+//           hotspot.$.id &&
+//           hotspot.$.tilt &&
+//           hotspot.$.url &&
+//           hotspot.$.skinid &&
+//           hotspot.$.title &&
+//           hotspot.$.pan
+//       )
+//       .find((h) => h.$.id === hotspotId);
+//     if (hotspot) {
+//       hotspot.$.skinid = status ? 'ht_disponible' : 'ht_noDisponible';
+//       const builder = new xml2js.Builder();
+//       const xml = builder.buildObject(result);
+//       await fs.promises.writeFile(xmlFilePath, xml);
+//       console.log('File updated correctly');
+//     } else {
+//       throw new Error(`No hotspot found with the id: ${hotspotId}`);
+//     }
+//   } catch (error) {
+//     console.error(error);
+//     return error.message;
+//   }
+// };
+
+const getAllUserdata = async () => {
+  try {
+    const result = await getData();
+
+    const userDataArray = result.tour.panorama.map(({ userdata }) => {
+      return {
+        source: userdata[0].$.source,
+        comment: userdata[0].$.comment,
+        nodeid: userdata[0].$.nodeid,
+        author: userdata[0].$.author,
+        copyright: userdata[0].$.copyright,
+        longitude: userdata[0].$.longitude,
+        datetime: userdata[0].$.datetime,
+        customnodeid: userdata[0].$.customnodeid,
+        tags: userdata[0].$.tags,
+        latitude: userdata[0].$.latitude,
+        title: userdata[0].$.title,
+        info: userdata[0].$.info,
+        description: userdata[0].$.description,
+      };
+    });
+    return userDataArray;
+  } catch (error) {
+    console.error(error);
+    return error.message;
+  }
+};
+
+module.exports = {
+  updateHotspotAttributes,
+  getAllHotspots,
+  getAllUserdata,
+};
