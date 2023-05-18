@@ -434,7 +434,7 @@
       <min tilt="-90" fovpixel="2" pan="0"/>
       <max tilt="90" fovfisheye="360" fov="120" scaletofit="1" fovstereographic="270" pan="360"/>
     </view>
-    <userdata copyright="" info="$14.900.000" latitude="" nodeid="node61" customnodeid="" longitude="" comment="lote14" title="Lote 14" description="&lt;b>Sup. Total:&lt;/b> 5.191,62m²&lt;br>&lt;b>Servidumbre:&lt;/b> 469,02 m²&lt;br>&lt;b>Sup. Parcial:&lt;/b> 4.722,61m²&lt;br>Loma suave, soleada, despejada&#xa;" datetime="20/04/2023 12:47" tags="mostrar" author="" source=""/>
+    <userdata copyright="" info="$14.900.000" latitude="" nodeid="node61" customnodeid="lote14" longitude="" comment="" title="Lote 14" description="&lt;b>Sup. Total:&lt;/b> 5.191,62m²&lt;br>&lt;b>Servidumbre:&lt;/b> 469,02 m²&lt;br>&lt;b>Sup. Parcial:&lt;/b> 4.722,61m²&lt;br>Loma suave, soleada, despejada&#xa;" datetime="20/04/2023 12:47" tags="mostrar" author="" source=""/>
     <hotspots wordwrap="1" width="180" height="20">
       <label borderalpha="1" textalpha="1" textcolor="0x000000" bordercolor="0x000000" wordwrap="1" borderradius="1" width="180" backgroundalpha="1" border="1" enabled="1" height="20" backgroundcolor="0xffffff" background="1"/>
       <polystyle borderalpha="1" bordercolor="0xffffff" mode="1" backgroundalpha="0.0392157" handcursor="0" backgroundcolor="0x0000ff"/>
