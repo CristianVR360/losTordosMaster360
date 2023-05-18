@@ -50,6 +50,16 @@
       document.getElementById('status').checked =
         hotspot.skinid === 'ht_disponible' ? true : false;
     }
+
+    if (hotspot?.info?.info) {
+      if (hotspot.info.info[0] === '$') {
+        const priceLength = hotspot.info.info.length;
+        hotspot.info.info = hotspot.info.info.substring(1, priceLength);
+      }
+      document.getElementById('price').value = hotspot.info.info;
+    } else {
+      document.getElementById('price').value = 0;
+    }
   }
 
   function getCookie(name) {

@@ -1,6 +1,7 @@
 const {
   updateHotspotAttributes,
   getAllHotspots,
+  getAllUserdata,
 } = require('../helpers/modifyXML');
 
 const updateLot = async (req, res) => {
@@ -28,7 +29,17 @@ const updateLot = async (req, res) => {
 
 const getLots = async (req, res) => {
   try {
-    const hotspots = await getAllHotspots();
+    let hotspots = await getAllHotspots();
+    const InfoLote = await getAllUserdata();
+
+    hotspots = hotspots.map((hotspot) => {
+      hotspot = {
+        ...hotspot,
+        info: InfoLote.filter((lote) => hotspot.id === lote.customnodeid)[0],
+      };
+      return hotspot;
+    });
+
     res.status(200).json({ hotspots });
   } catch (error) {
     console.log(error);
