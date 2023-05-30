@@ -38,7 +38,7 @@
       <hotspot description="https://drive.google.com/file/d/1la04alPD0vMSOj-Q6zHkMohqU0t3zGn-/view?usp=share_link" url="{node19}" tilt="-71.88" skinid="ht_disponible" id="lote19" target="" pan="-251.61" title="A"/>
       <hotspot description="https://drive.google.com/file/d/1la04alPD0vMSOj-Q6zHkMohqU0t3zGn-/view?usp=share_link" url="{node17}" tilt="-66.9" skinid="ht_disponible" id="lote20" target="" pan="-256.7" title="B"/>
       <hotspot description="https://drive.google.com/file/d/1la04alPD0vMSOj-Q6zHkMohqU0t3zGn-/view?usp=share_link" url="{node16}" tilt="-70.49" skinid="ht_disponible" id="lote21" target="" pan="-279.56" title="C"/>
-      <hotspot description="119KM&lt;br>&#xa;2H 27MIN" url="" tilt="1.34" skinid="ht_tag_georeferencia_largeRight" id="Point04" target="_blank" pan="-271.24" title="SOLLIPULLI"/>
+      <hotspot description="119KM&lt;br>&#xa;2H 27MIN" url="" tilt="1.34" skinid="ht_tag_georeferencia_largeRight" id="Point04" target="_blank" pan="-271.24" title="Sollipulli"/>
       <hotspot description="https://drive.google.com/file/d/1la04alPD0vMSOj-Q6zHkMohqU0t3zGn-/view?usp=share_link" url="{node15}" tilt="-68.95" skinid="ht_disponible" id="lote22" target="" pan="-295.85" title="D"/>
       <hotspot distance="218.07" description="https://drive.google.com/file/d/1-wx_NzUqypmyR_LzziZzRa7omE4Cl4Ky/view?usp=share_link" url="{node36}" tilt="-60.75" skinid="ht_noDisponible" id="lote18" target="" pan="-130.7" title="18"/>
       <hotspot description="14.9KM&lt;br>&#xa;15 MIN" url="" tilt="-3.29" skinid="ht_tag_georeferencia_largeRight" id="Point01" target="_blank" pan="-292.74" title="Cunco"/>
@@ -52,11 +52,11 @@
       <hotspot description="48.2KM&lt;br>&#xa;40 MIN" url="" tilt="0.17" skinid="ht_tag_georeferencia_mediumRight" id="Point09" target="_blank" pan="-273.83" title="Melipeuco"/>
       <hotspot description="90.4KM&lt;br>&#xa;1H 40MIN" url="" tilt="0.88" skinid="ht_tag_georeferencia_smallLeft" id="Point04" target="_blank" pan="-266.5" title="Icalma"/>
       <hotspot description="70KM&lt;br>&#xa;1H 10MIN" url="" tilt="1.32" skinid="ht_tag_georeferencia_largeLeft" id="Point04" target="_blank" pan="-268.48" title="Reserva Nacional China Muerta"/>
-      <hotspot description="49.7KM&lt;br>&#xa;1H" url="" tilt="-1.59" skinid="ht_tag_georeferencia_smallLeft" id="Point04" target="_blank" pan="-326.04" title="Lago Huilipilun"/>
-      <hotspot description="15KM&lt;br>&#xa;20MIN" url="" tilt="-4.51" skinid="ht_tag_georeferencia_smallLeft" id="Point04" target="_blank" pan="-304.27" title="Rio Allipen"/>
+      <hotspot description="49.7KM&lt;br>&#xa;1H" url="" tilt="-1.59" skinid="ht_tag_georeferencia_smallLeft" id="Point04" target="_blank" pan="-326.04" title="Lago Huilipilún"/>
+      <hotspot description="15KM&lt;br>&#xa;20MIN" url="" tilt="-4.51" skinid="ht_tag_georeferencia_smallLeft" id="Point04" target="_blank" pan="-304.27" title="Rio Allipén"/>
       <hotspot description="194KM&lt;br>&#xa;2H 30MIN" url="" tilt="-0.6" skinid="ht_tag_georeferencia_largeRight" id="Point04" target="_blank" pan="-21.62" title="Valdivia"/>
       <hotspot description="53.2KM&lt;br>&#xa;50MIN" url="" tilt="-0.08" skinid="ht_tag_georeferencia_largeRight" id="Point04" target="_blank" pan="-101.34" title="Temuco"/>
-      <hotspot description="40KM&lt;br>&#xa;1H" url="" tilt="-0.29" skinid="ht_tag_georeferencia_largeRight" id="Point04" target="_blank" pan="-149.2" title="Vilcún"/>
+      <hotspot description="40KM&lt;br>&#xa;1H" url="" tilt="-0.29" skinid="ht_tag_georeferencia_largeRight" id="Point04" target="_blank" pan="-149.13" title="Vilcún"/>
       <hotspot description="62KM&lt;br>&#xa;1H" url="" tilt="-0.94" skinid="ht_tag_georeferencia_largeRight" id="Point04" target="_blank" pan="-54.03" title="Aeropuerto Araucanía"/>
       <hotspot description="149KM&lt;br>&#xa;2H 40MIN" url="" tilt="0.71" skinid="ht_tag_georeferencia_largeLeft" id="Point02" target="_blank" pan="-313.11" title="Volcán Lanín"/>
       <hotspot description="146KM&lt;br>&#xa;2H 36MIN" url="" tilt="-0.57" skinid="ht_tag_georeferencia_mediumRight" id="Point03" target="_blank" pan="-344.65" title="Choshuenco"/>
