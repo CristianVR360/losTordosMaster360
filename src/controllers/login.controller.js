@@ -7,8 +7,7 @@ const getJWT = async (req, res) => {
   const { email, password } = req.body;
 
   const user = await User.findOne({ email });
-
-  console.log(user.password);
+  
   if (!user) {
     return res.status(401).json({ error: 'Invalid credentials' });
   }
