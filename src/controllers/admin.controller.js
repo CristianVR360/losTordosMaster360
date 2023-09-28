@@ -1,49 +1,43 @@
 const {
   updateHotspotAttributes,
   getAllHotspots,
-  getAllUserdata,
+ 
 } = require('../helpers/modifyXML');
 
 const updateLot = async (req, res) => {
-  const { lotId, info, status = true } = req.body;
+  const { lotId, description, status, newInfo } = req.body;
 
   if (!lotId) {
-    return res.status(400).json({
-      message: 'lotId is required',
-    });
+      return res.status(400).json({
+          message: 'lotId is required',
+      });
   }
   try {
-    const error = await updateHotspotAttributes(lotId, status, info);
+      const error = await updateHotspotAttributes(lotId, description, status, newInfo);
 
-    if (error) {
-      return res.status(400).json({ message: error });
-    }
+      if (error) {
+          return res.status(400).json({ message: error });
+      }
 
-    res.status(200).json({
-      message: 'Lot updated',
-    });
+      res.status(200).json({
+          message: 'Lot updated',
+      });
   } catch (err) {
-    console.log(err);
+      console.log(err);
   }
 };
+
 
 const getLots = async (req, res) => {
   try {
-    let hotspots = await getAllHotspots();
-    const InfoLote = await getAllUserdata();
-
-    hotspots = hotspots.map((hotspot) => {
-      hotspot = {
-        ...hotspot,
-        info: InfoLote.filter((lote) => hotspot.id === lote.customnodeid)[0],
-      };
-      return hotspot;
-    });
-
+    const hotspots = await getAllHotspots();
+    
     res.status(200).json({ hotspots });
   } catch (error) {
     console.log(error);
+    res.status(500).json({ message: 'Server error' }); // Es bueno devolver una respuesta incluso en caso de error.
   }
 };
+
 
 module.exports = { updateLot, getLots };

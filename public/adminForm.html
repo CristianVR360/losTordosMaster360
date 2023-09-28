@@ -43,78 +43,71 @@
         </div>
       </div>
     </nav>
-    <div
-      class="d-flex align-items-center justify-content-center"
-      style="height: 93vh"
-    >
-      <form id="admin-form" class="w-75">
-        <div class="form-group">
-          <label for="loteId" class="control-label">ID Lote</label>
-          <select class="form-control" id="loteId">
-            <option value="1" selected></option>
-          </select>
-        </div>
-        <div class="form-group" style="visibility: hidden; position: absolute;">
-          <label for="title" class="control-label" >Nombre del lote</label>
-          <input
-            disabled
-            type="text"
-            class="form-control"
-            id="title"
-            name="title"
-            placeholder=""
-          />
-        </div>
+    <div class="d-flex align-items-center justify-content-center" style="min-height: 93vh">
 
-        <div class="form-group" style="visibility: hidden; position: absolute;">
-          <label for="surface" class="control-label">Superficie</label>
-          <input
-            type="text"
-            class="form-control"
-            id="surface"
-            name="surface"
-            placeholder=""
-            disabled
-          />
-        </div>
-        
-
-        <div class="form-group">
-          <label for="price" class="control-label">Precio</label>
-          <input
-            class="form-control"
-            id="price"
-            name="price"
-            placeholder=""
-          />
-        </div>
-
-        <div class="form-group">
-          <label class="control-label" for="status">
-            <input type="checkbox" id="status" name="status" />
-            Disponibilidad
-          </label>
-        </div>
+    <div class="w-75">
+      <!-- Tabla de lotes -->
+      <div class="table-responsive">
+      <table class="table table-bordered table-hover" id="hotspotTable">
+        <thead>
+          <tr>
+            <th>ID Lote</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th>Disponibilidad</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Aquí irían las filas con los datos de los lotes, por ejemplo: -->
        
-        <div class="form-group" style="visibility: hidden; position: absolute;">
-          <label for="description" class="control-label">Descripción</label>
-          <textarea
-            class="form-control form-control-lg"
-            id="description"
-            name="description"
-            rows="5"
-            placeholder="Tiene un un cesped verde"
-            disabled
-          ></textarea>
-        </div>
-               
-        <br />
-
-        <div class="form-group">
-          <button type="submit" class="btn btn-primary">Modificar</button>
-        </div>
-      </form>
+          <!-- ... [más filas según los lotes] ... -->
+        </tbody>
+      </table>
     </div>
+    </div>
+
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="editModalLabel">Lote <span id="modalLoteId"></span></h5>
+
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <form id="editForm">
+                      <div class="form-group">
+                          <label for="titleInput">Precio</label>
+                          <input type="text" class="form-control" id="titleInput" >
+                      </div>
+                      <div class="form-group">
+                          <label for="descriptionInput">Descripción</label>
+                          <textarea class="form-control" id="descriptionInput"></textarea>
+                      </div>
+                      <div class="form-group">
+                          <label for="skinIDSelect">Estado</label>
+                          <select id="skinIDSelect">
+                              <option value="ht_disponible">Disponible</option>
+                              <option value="ht_noDisponible">No Disponible</option>
+                              <option value="ht_reservado">Reservado</option>
+                              <option value="ht_opcion4">Oferta</option>
+                          </select>
+                      </div>
+                  </form>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                  <button type="button" class="btn btn-primary" id="saveChangesBtn">Guardar</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  </div>
+
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

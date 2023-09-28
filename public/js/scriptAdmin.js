@@ -1,8 +1,7 @@
 (() => {
-  const price = document.querySelector('#price');
-  const hotspotsSelect = document.querySelector('#loteId');
-  const form = document.querySelector('#admin-form');
+  const tableBody = document.querySelector('#hotspotTable tbody');
   const logoutButton = document.querySelector('#logoutButton');
+  let currentLoteId = null;
 
   let hotspotsXML = [];
   const url = `${window.location.origin}/api/admin`;
@@ -11,171 +10,164 @@
   let isJWTToken = true;
 
   const optionsGET = {
-    method: 'GET',
-    headers: {
-      authorization: `Bearer ${token}`,
-    },
+      method: 'GET',
+      headers: {
+          authorization: `Bearer ${token}`,
+      },
   };
-
-  const optionsPUT = {
-    method: 'PUT',
-    headers: {
-      'Content-Type': 'application/json',
-      authorization: `Bearer ${token}`,
-    },
-    body: {},
-  };
-
-  const formatNumber = () => {
-    let price = document.getElementById('price');
-    let num = price.value.replace(/\./g, '');
-    if (num === '') {
-      price.value = '';
-    } else if (/^\d+$/.test(num)) {
-      price.value = parseInt(num).toLocaleString('es-ES');
-    } else {
-      let digits = num.match(/\d+/g);
-      price.value = digits ? digits.join('') : '';
-      alert('Ingrese solo números');
-    }
-  };
-
-  function changeDisponibility() {
-    const loteId = this.value;
-    const hotspot = hotspotsXML.find((hotspot) => hotspot.id === loteId);
-
-    if (!hotspot) document.getElementById('status').checked = false;
-
-    if (hotspot) {
-      document.getElementById('status').checked =
-        hotspot.skinid === 'ht_disponible' ? true : false;
-    }
-
-    if (hotspot?.info?.info) {
-      if (hotspot.info.info[0] === '$') {
-        const priceLength = hotspot.info.info.length;
-        hotspot.info.info = hotspot.info.info.substring(1, priceLength);
-      }
-      document.getElementById('price').value = hotspot.info.info;
-    } else {
-      document.getElementById('price').value = 0;
-    }
-  }
 
   function getCookie(name) {
-    const cookies = document.cookie.split(';');
-    for (let i = 0; i < cookies.length; i++) {
-      const cookie = cookies[i].trim();
-      if (cookie.startsWith(name + '=')) {
-        return cookie.substring(name.length + 1);
+      const cookies = document.cookie.split(';');
+      for (let i = 0; i < cookies.length; i++) {
+          const cookie = cookies[i].trim();
+          if (cookie.startsWith(name + '=')) {
+              return cookie.substring(name.length + 1);
+          }
       }
-    }
-    return '';
+      return '';
   }
 
-  const getAllFormValues = () => {
-    const loteId = document.getElementById('loteId').value;
-    // const title = document.getElementById('title').value;
-    // const surface = document.getElementById('surface').value;
-    const price = document.getElementById('price').value;
-    const status = document.getElementById('status').checked;
-    // const description = document.getElementById('description').value;
+  function getAvailabilityText(skinid) {
+      switch (skinid) {
+          case 'ht_disponible':
+              return 'Disponible';
+          case 'ht_noDisponible':
+              return 'No Disponible';
+          case 'ht_reservado':
+              return 'Reservado';
+          case 'ht_oferta':
+              return 'Oferta';
+          default:
+              return '';
+      }
+  }
 
-    return {
-      lotId: loteId,
-      status,
-      info: `$${price}`,
-    };
-  };
-
-  const cleanInputs = () => {
-    document.getElementById('loteId').value = '';
-    document.getElementById('title').value = '';
-    document.getElementById('surface').value = '';
-    document.getElementById('price').value = '';
-    document.getElementById('status').checked = false;
-    document.getElementById('description').value = '';
-  };
+  
 
   const replacePage = () => {
-    history.replaceState(null, null, 'loginForm.html');
-    location.href = `${window.location.origin}/loginForm.html`;
-  };
-
-  const responseAlertCreate = (message, error = false) => {
-    const responseAlert = document.createElement('div');
-    responseAlert.className = `alert ${
-      error ? 'alert-danger' : 'alert-primary'
-    }`;
-    responseAlert.innerHTML = message;
-    form.prepend(responseAlert);
-
-    setTimeout(() => {
-      responseAlert.remove();
-    }, 2300);
+      history.replaceState(null, null, 'loginForm.html');
+      location.href = `${window.location.origin}/loginForm.html`;
   };
 
   fetch(`${window.location.origin}/api/login/verify`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ token }),
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ token }),
   })
-    .then((response) => response.json())
-    .then(({ isValidToken }) => {
+  .then((response) => response.json())
+  .then(({ isValidToken }) => {
       isJWTToken = isValidToken;
-    })
-    .catch((error) => console.error(error));
+  })
+  .catch((error) => console.error(error));
 
   logoutButton.addEventListener('click', () => {
-    document.cookie = 'jwt=logout';
-    replacePage();
+      document.cookie = 'jwt=logout';
+      replacePage();
   });
 
   if (token !== 'logout' && isJWTToken) {
-    price.addEventListener('blur', formatNumber);
+      fetch(url, optionsGET)
+          .then((response) => response.json())
+          .then(({ hotspots }) => {
+            hotspots = hotspots.filter(hotspot => !['Point01', 'Point02', 'Point03'].includes(hotspot.id));
+              hotspotsXML = hotspots;
 
-    hotspotsSelect.addEventListener('change', changeDisponibility);
+              hotspots.forEach((hotspot) => {
+                  const row = document.createElement('tr');
+                  row.innerHTML = `
+                      <td>${hotspot.id}</td>
+                      <td>${hotspot.description}</td>
+                      <td>${hotspot.url}</td>
+                      <td>${getAvailabilityText(hotspot.skinid)}</td>
+                      <td><button class="btn btn-sm btn-primary modify-btn" data-bs-toggle="modal" data-bs-target="#editModal" data-lote-id="${hotspot.id}">Modificar</button></td>
+                  `;
+                  tableBody.appendChild(row);
+              });
+              setupModifyButtons();
+          })
+          .catch((error) => console.error(error));
+  } else {
+      replacePage();
+  }
 
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
+  function setupModifyButtons() {
+    const modifyButtons = document.querySelectorAll('.modify-btn');
+    const titleInput = document.getElementById('titleInput');
+    const descriptionInput = document.getElementById('descriptionInput');
+    const skinIDSelect = document.getElementById('skinIDSelect');
+    const modalLoteIdSpan = document.getElementById('modalLoteId');  // Obtiene el elemento <span> donde colocaremos el ID
 
-      const values = getAllFormValues();
+    modifyButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          currentLoteId = this.getAttribute('data-lote-id');  // Almacena el loteId
+           
+            const row = this.closest('tr');
 
-      optionsPUT.body = JSON.stringify(values);
+            const loteTitle = row.querySelector('td:nth-child(3)').textContent; // Precio
+            const loteDescription = row.querySelector('td:nth-child(2)').textContent; // Superficie
 
-      fetch(url, optionsPUT)
-        .then((response) => {
-          responseAlertCreate('Actualización Exitosa');
-
-          return response.json();
-        })
-        .then(() => cleanInputs())
-        .catch((error) => {
-          responseAlertCreate(
-            'Ocurrio un error, por favor intentelo en unos minutos',
-            true
-          );
-          console.error(error);
+            titleInput.value = loteTitle; // Establece el precio en el modal
+            descriptionInput.value = loteDescription; // Establece la superficie en el modal
+            modalLoteIdSpan.textContent = currentLoteId;  // Establece el ID en el título del modal
+ 
         });
     });
+}
+// Captura el botón "Guardar" del modal
+const saveChangesBtn = document.getElementById('saveChangesBtn');
 
-    fetch(url, optionsGET)
-      .then((response) => response.json())
-      .then(({ hotspots }) => {
-        // Crea un option para cada hotspot
-        hotspotsXML = hotspots;
+saveChangesBtn.addEventListener('click', function() {
+  // Captura los datos del modal
+  const loteId = currentLoteId;
+  const price = document.getElementById('titleInput').value;
+  const description = document.getElementById('descriptionInput').value;
+  const status = document.getElementById('skinIDSelect').value;
 
-        hotspots.forEach((hotspot) => {
-          const option = document.createElement('option');
-          option.value = hotspot.id;
-          option.textContent = hotspot.id;
-          hotspotsSelect.appendChild(option);
-        });
-      })
-      .catch((error) => console.error(error));
-  } else {
-    replacePage();
-  }
+  // Crea el objeto de datos para enviar al backend
+  const data = {
+      lotId: loteId,
+      status,
+      newInfo: price,
+      description
+  };
+
+  // Envía la solicitud PUT al backend
+  fetch(url, {
+    method: 'PUT',
+    headers: {
+        'Content-Type': 'application/json',
+        authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify(data)
+  })
+  .then(response => {
+    if (response.ok) {
+        return response.json();
+    } else {
+        throw new Error(`Server responded with a status of ${response.status}`);
+    }
+  })
+  .then(data => {
+      console.log('Datos actualizados correctamente');
+      
+      // Cerrar el modal
+      const modal = document.getElementById('editModal');
+      const bootstrapModal = new bootstrap.Modal(modal);
+      bootstrapModal.hide();
+
+      // Mostrar un mensaje de éxito
+      alert('Guardado con éxito!');
+
+      // Opcionalmente, puedes refrescar la página para cargar los nuevos datos
+      location.reload();
+  })
+  .catch(error => {
+      console.error('Error al actualizar:', error.message);
+  });
+});
+
+
+
 })();

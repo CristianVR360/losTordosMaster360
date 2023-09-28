@@ -3,6 +3,12 @@ const User = require('../models/user.model');
 
 const authenticateJWT = (req, res, next) => {
   const headerAuth = req.headers.authorization;
+  if (!headerAuth) {
+    return res.status(401).json({
+      message: 'Authorization header is missing',
+    });
+  }
+
   const token = headerAuth.split(' ')[1];
 
   if (token) {
