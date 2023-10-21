@@ -1,119 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<panorama appversion="6.1.2" apprev="17873" id="node1">
-  <input levelbiashidpi="1.000" levelingpitch="0" width="2048" levelbias="0.400" height="2048" leveltilesize="510" overlap="1" leveltileurl="tiles/node1/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingroll="0">
-    <level preload="0" width="2048" height="2048" predecode="0"/>
-    <level preload="0" width="1024" height="1024" predecode="0"/>
-    <level preload="0" width="512" height="512" predecode="0"/>
-    <level preload="1" width="256" height="256" predecode="1"/>
-    <preview strip="1" color="0x808080"/>
+<panorama id="node1" appversion="6.1.2" apprev="17873">
+  <input levelingroll="0" leveltilesize="510" overlap="1" height="2048" levelbias="0.400" leveltileurl="tiles/node1/cf_%c/l_%l/c_%x/tile_%y.jpg" width="2048" levelbiashidpi="1.000" levelingpitch="0">
+    <level height="2048" preload="0" width="2048" predecode="0"/>
+    <level height="1024" preload="0" width="1024" predecode="0"/>
+    <level height="512" preload="0" width="512" predecode="0"/>
+    <level height="256" preload="1" width="256" predecode="1"/>
+    <preview color="0x808080" strip="1"/>
   </input>
-  <view fovmode="0" pannorth="0">
-    <start pan="-79.74" projection="4" fov="96.49" tilt="-85.77"/>
-    <flyin pan="0" projection="9" fov="170" tilt="-90"/>
-    <min pan="0" tilt="-90" fovpixel="2"/>
-    <max pan="360" scaletofit="1" fov="120" fovstereographic="270" tilt="90" fovfisheye="360"/>
+  <view pannorth="0" fovmode="0">
+    <start tilt="-85.77" fov="96.49" pan="-79.74" projection="4"/>
+    <flyin tilt="-90" fov="170" pan="0" projection="9"/>
+    <min fovpixel="2" tilt="-90" pan="0"/>
+    <max fovstereographic="270" fovfisheye="360" tilt="90" fov="120" pan="360" scaletofit="1"/>
   </view>
-  <userdata description="" copyright="" tags="Fotos" customnodeid="" source="" nodeid="node1" author="" title="Los Tordos" info="" longitude="-72.314677" datetime="16/07/2023 14:27" comment="" latitude="-39.253471"/>
-  <hotspots width="180" height="20" wordwrap="1">
-    <label enabled="1" textalpha="1" width="180" height="20" bordercolor="0x000000" borderalpha="1" wordwrap="1" textcolor="0x000000" background="1" backgroundalpha="1" borderradius="1" backgroundcolor="0xffffff" border="1"/>
-    <polystyle bordercolor="0x0000ff" borderalpha="1" backgroundalpha="0.25098" mode="0" handcursor="1" backgroundcolor="0x0000ff"/>
-    <hotspot pan="-94.7" description="&lt;b>Superficie:&lt;/b> 5.377 m² &#xa;&lt;b>Servidumbre:&lt;/b> 465 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.842 m²" target="_blank" id="1" tilt="-60.04" title="1" url="" skinid="ht_noDisponible"/>
-    <hotspot pan="-123.11" description="" target="_blank" id="2" tilt="-65.96" title="2" url="" skinid="ht_noDisponible"/>
-    <hotspot pan="-69.06" description="&lt;b>Superficie:&lt;/b> 4.965 m² &#xa;&lt;b>Servidumbre:&lt;/b> 196 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.161 m²" target="_blank" id="3" tilt="-56.24" title="3" url="" skinid="ht_noDisponible"/>
-    <hotspot pan="-60.87" description="&lt;b>Superficie:&lt;/b> 5.011 m² &#xa;&lt;b>Servidumbre:&lt;/b> 156 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.167 m²" target="_blank" id="4" tilt="-58.01" title="4" url="$60.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-52.13" description="&lt;b>Superficie:&lt;/b> 4.985 m² &#xa;&lt;b>Servidumbre:&lt;/b> 176 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.161 m²" target="_blank" id="5" tilt="-60.31" title="5" url="$60.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-43.38" description="&lt;b>Superficie:&lt;/b> 4.844 m² &#xa;&lt;b>Servidumbre:&lt;/b> 200 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.044 m²" target="_blank" id="6" tilt="-62.77" title="6" url="$60.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-33.2" description="&lt;b>Superficie:&lt;/b> 4.844 m² &#xa;&lt;b>Servidumbre:&lt;/b> 200 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.044 m²" target="_blank" id="7" tilt="-64.18" title="7" url="" skinid="ht_noDisponible"/>
-    <hotspot pan="-21.17" description="&lt;b>Superficie:&lt;/b> 4.864 m² &#xa;&lt;b>Servidumbre:&lt;/b> 204 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.068 m²" target="_blank" id="8" tilt="-64.8" title="8" url="" skinid="ht_noDisponible"/>
-    <hotspot pan="-9.49" description="&lt;b>Superficie:&lt;/b> 4.321 m² &#xa;&lt;b>Servidumbre:&lt;/b> 754 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.075 m²" target="_blank" id="9" tilt="-64.28" title="9" url="$60.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-356.35" description="&lt;b>Superficie:&lt;/b> 4.593 m² &#xa;&lt;b>Servidumbre:&lt;/b> 790 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.383 m²" target="_blank" id="10" tilt="-61.88" title="10" url="" skinid="ht_noDisponible"/>
-    <hotspot pan="-347.37" description="&lt;b>Superficie:&lt;/b> 4.930 m² &#xa;&lt;b>Servidumbre:&lt;/b> 204 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.134 m²" target="_blank" id="11" tilt="-60.02" title="11" url="" skinid="ht_noDisponible"/>
-    <hotspot pan="-340.27" description="&lt;b>Superficie:&lt;/b> 4.845 m² &#xa;&lt;b>Servidumbre:&lt;/b> 204 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.049 m²" target="_blank" id="12" tilt="-57.26" title="12" url="$60.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-333.13" description="&lt;b>Superficie:&lt;/b> 4.845 m² &#xa;&lt;b>Servidumbre:&lt;/b> 204 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.049 m²" target="_blank" id="13" tilt="-54.63" title="13" url="" skinid="ht_noDisponible"/>
-    <hotspot pan="-328.31" description="&lt;b>Superficie:&lt;/b> 4.845 m² &#xa;&lt;b>Servidumbre:&lt;/b> 204 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.049 m²" target="_blank" id="14" tilt="-51.56" title="14" url="$60.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-323.58" description="&lt;b>Superficie:&lt;/b> 4.845 m² &#xa;&lt;b>Servidumbre:&lt;/b> 204 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.049 m²" target="_blank" id="15" tilt="-48.49" title="15" url="" skinid="ht_noDisponible"/>
-    <hotspot pan="-319.85" description="&lt;b>Superficie:&lt;/b> 4.845 m² &#xa;&lt;b>Servidumbre:&lt;/b> 204 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.049 m²" target="_blank" id="16" tilt="-45.51" title="16" url="$60.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-318.31" description="&lt;b>Superficie:&lt;/b> 5.127 m² &#xa;&lt;b>Servidumbre:&lt;/b> 0 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.127 m²" target="_blank" id="17" tilt="-42.89" title="17" url="$65.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-312.48" description="&lt;b>Superficie:&lt;/b> 4.821 m² &#xa;&lt;b>Servidumbre:&lt;/b> 502 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.323 m²" target="_blank" id="18" tilt="-49.75" title="18" url="$50.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-308.69" description="&lt;b>Superficie:&lt;/b> 4.900 m² &#xa;&lt;b>Servidumbre:&lt;/b> 200 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.100 m²" target="_blank" id="19" tilt="-52.65" title="19" url="$50.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-303.46" description="&lt;b>Superficie:&lt;/b> 4.900 m² &#xa;&lt;b>Servidumbre:&lt;/b> 200 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.100 m²" target="_blank" id="20" tilt="-55.71" title="20" url="$50.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-296.99" description="&lt;b>Superficie:&lt;/b> 4.900 m² &#xa;&lt;b>Servidumbre:&lt;/b> 200 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.100 m²" target="_blank" id="21" tilt="-58.45" title="21" url="$50.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-288.66" description="&lt;b>Superficie:&lt;/b> 4.900 m² &#xa;&lt;b>Servidumbre:&lt;/b> 200 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.100 m²" target="_blank" id="22" tilt="-60.97" title="22" url="$50.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-279.2" description="&lt;b>Superficie:&lt;/b> 4.900 m² &#xa;&lt;b>Servidumbre:&lt;/b> 200 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.100 m²" target="_blank" id="23" tilt="-62.93" title="23" url="$50.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-267.89" description="&lt;b>Superficie:&lt;/b> 4.900 m² &#xa;&lt;b>Servidumbre:&lt;/b> 200 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.100 m²" target="_blank" id="24" tilt="-64.18" title="24" url="$50.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-214.68" description="&lt;b>Superficie:&lt;/b> 4.800 m² &#xa;&lt;b>Servidumbre:&lt;/b> 200 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.000 m²" target="_blank" id="50" tilt="-69.51" title="50" url="" skinid="ht_noDisponible"/>
-    <hotspot pan="-205.92" description="&lt;b>Superficie:&lt;/b> 4.800 m² &#xa;&lt;b>Servidumbre:&lt;/b> 200 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.000 m²" target="_blank" id="49" tilt="-65.84" title="49" url="$50.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-198.76" description="&lt;b>Superficie:&lt;/b> 4.800 m² &#xa;&lt;b>Servidumbre:&lt;/b> 200 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.000 m²" target="_blank" id="48" tilt="-61.86" title="48" url="" skinid="ht_noDisponible"/>
-    <hotspot pan="-194.84" description="&lt;b>Superficie:&lt;/b> 4.942 m² &#xa;&lt;b>Servidumbre:&lt;/b> 276 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.218 m²" target="_blank" id="47" tilt="-57.62" title="47" url="$50.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-175.49" description="&lt;b>Superficie:&lt;/b> 4.800 m² &#xa;&lt;b>Servidumbre:&lt;/b> 200 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.000 m²" target="_blank" id="46" tilt="-61.46" title="46" url="$50.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-158.18" description="&lt;b>Superficie:&lt;/b> 4.464 m² &#xa;&lt;b>Servidumbre:&lt;/b> 576 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.040 m²" target="_blank" id="45" tilt="-62.91" title="45" url="$50.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-145.41" description="&lt;b>Superficie:&lt;/b> 4.756 m² &#xa;&lt;b>Servidumbre:&lt;/b> 284 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.040 m²" target="_blank" id="44" tilt="-61.15" title="44" url="$50.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-134.35" description="&lt;b>Superficie:&lt;/b> 4.807 m² &#xa;&lt;b>Servidumbre:&lt;/b> 284 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.091 m²" target="_blank" id="43" tilt="-58.2" title="43" url="$50.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-126.32" description="&lt;b>Superficie:&lt;/b> 4.7320 m² &#xa;&lt;b>Servidumbre:&lt;/b> 1.122 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.854 m²" target="_blank" id="42" tilt="-55.46" title="42" url="$50.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-136.72" description="&lt;b>Superficie:&lt;/b> 4.850 m² &#xa;&lt;b>Servidumbre:&lt;/b> 1.276 m² &#xa;&lt;b>Superficie Total:&lt;/b> 6.126 m²" target="_blank" id="41" tilt="-51.56" title="41" url="$50.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-229.31" description="&lt;b>Superficie:&lt;/b> 4.800 m² &#xa;&lt;b>Servidumbre:&lt;/b> 200 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.000 m²" target="_blank" id="51" tilt="-72.55" title="51" url="$50.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-247.54" description="&lt;b>Superficie:&lt;/b> 4.800 m² &#xa;&lt;b>Servidumbre:&lt;/b> 200 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.000 m²" target="_blank" id="52" tilt="-74.35" title="52" url="" skinid="ht_noDisponible"/>
-    <hotspot pan="-268.34" description="&lt;b>Superficie:&lt;/b> 4.800 m² &#xa;&lt;b>Servidumbre:&lt;/b> 200 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.000 m²" target="_blank" id="53" tilt="-74.67" title="53" url="$50.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-287.48" description="&lt;b>Superficie:&lt;/b> 4.800 m² &#xa;&lt;b>Servidumbre:&lt;/b> 200 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.000 m²" target="_blank" id="54" tilt="-72.87" title="54" url="$50.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-301.13" description="&lt;b>Superficie:&lt;/b> 4.800 m² &#xa;&lt;b>Servidumbre:&lt;/b> 200 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.000 m²" target="_blank" id="55" tilt="-69.85" title="55" url="$50.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-310.35" description="&lt;b>Superficie:&lt;/b> 4.800 m² &#xa;&lt;b>Servidumbre:&lt;/b> 200 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.000 m²" target="_blank" id="56" tilt="-65.9" title="56" url="$50.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-317.12" description="&lt;b>Superficie:&lt;/b> 4.800 m² &#xa;&lt;b>Servidumbre:&lt;/b> 200 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.000 m²" target="_blank" id="57" tilt="-62.08" title="57" url="$50.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-320.62" description="&lt;b>Superficie:&lt;/b> 4.792 m² &#xa;&lt;b>Servidumbre:&lt;/b> 760 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.552 m²" target="_blank" id="58" tilt="-57.78" title="58" url="$50.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-101" description="&lt;b>Superficie:&lt;/b> 4.824 m² &#xa;&lt;b>Servidumbre:&lt;/b> 1.028 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.852 m²" target="_blank" id="Point02" tilt="-83.74" title="68" url="$50.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-124.34" description="&lt;b>Superficie:&lt;/b> 4.095 m² &#xa;&lt;b>Servidumbre:&lt;/b> 420 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.515 m²" target="_blank" id="Point02" tilt="-78.35" title="67" url="$50.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-142.98" description="&lt;b>Superficie:&lt;/b> 4.941 m² &#xa;&lt;b>Servidumbre:&lt;/b> 244 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.185 m²" target="_blank" id="Point02" tilt="-74.51" title="66" url="" skinid="ht_noDisponible"/>
-    <hotspot pan="-149.54" description="&lt;b>Superficie:&lt;/b> 4.660 m² &#xa;&lt;b>Servidumbre:&lt;/b> 534 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.194 m²" target="_blank" id="Point02" tilt="-69.35" title="65" url="" skinid="ht_noDisponible"/>
-    <hotspot pan="-178.94" description="&lt;b>Superficie:&lt;/b> 4.800 m² &#xa;&lt;b>Servidumbre:&lt;/b> 200 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.000 m²" target="_blank" id="64" tilt="-66.1" title="64" url="$50.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-181.84" description="&lt;b>Superficie:&lt;/b> 4.800 m² &#xa;&lt;b>Servidumbre:&lt;/b> 200 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.000 m²" target="_blank" id="63" tilt="-70.93" title="63" url="" skinid="ht_noDisponible"/>
-    <hotspot pan="-189.36" description="&lt;b>Superficie:&lt;/b> 4.800 m² &#xa;&lt;b>Servidumbre:&lt;/b> 200 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.000 m²" target="_blank" id="62" tilt="-76.44" title="62" url="" skinid="ht_noDisponible"/>
-    <hotspot pan="-200.2" description="&lt;b>Superficie:&lt;/b> 4.800 m² &#xa;&lt;b>Servidumbre:&lt;/b> 200 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.000 m²" target="_blank" id="61" tilt="-81.27" title="61" url="$50.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-244.33" description="&lt;b>Superficie:&lt;/b> 4.800 m² &#xa;&lt;b>Servidumbre:&lt;/b> 200 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.000 m²" target="_blank" id="60" tilt="-85.3" title="60" url="" skinid="ht_noDisponible"/>
-    <hotspot pan="-300" description="&lt;b>Superficie:&lt;/b> 4.800 m² &#xa;&lt;b>Servidumbre:&lt;/b> 200 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.000 m²" target="_blank" id="59" tilt="-83.64" title="59" url="$50.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-144.06" description="&lt;b>Superficie:&lt;/b> 4.877 m² &#xa;&lt;b>Servidumbre:&lt;/b> 486 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.363 m²" target="_blank" id="40" tilt="-53.37" title="40" url="$50.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-152.29" description="&lt;b>Superficie:&lt;/b> 4.897 m² &#xa;&lt;b>Servidumbre:&lt;/b> 486 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.383 m²" target="_blank" id="39" tilt="-54.77" title="39" url="" skinid="ht_noDisponible"/>
-    <hotspot pan="-161.08" description="&lt;b>Superficie:&lt;/b> 4.956 m² &#xa;&lt;b>Servidumbre:&lt;/b> 885 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.841 m²" target="_blank" id="38" tilt="-55.66" title="38" url="" skinid="ht_noDisponible"/>
-    <hotspot pan="-170.65" description="&lt;b>Superficie:&lt;/b> 4.414 m² &#xa;&lt;b>Servidumbre:&lt;/b> 878 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.292 m²" target="_blank" id="37" tilt="-55.58" title="37" url="$50.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-178.82" description="&lt;b>Superficie:&lt;/b> 4.761 m² &#xa;&lt;b>Servidumbre:&lt;/b> 393 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.154 m²" target="_blank" id="36" tilt="-54.9" title="36" url="$50.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-185.89" description="&lt;b>Superficie:&lt;/b> 5.458 m² &#xa;&lt;b>Servidumbre:&lt;/b> 482 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.940 m²" target="_blank" id="35" tilt="-53.17" title="35" url="$50.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-191.95" description="&lt;b>Superficie:&lt;/b> 4.885 m² &#xa;&lt;b>Servidumbre:&lt;/b> 898 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.783 m²" target="_blank" id="34" tilt="-50.85" title="34" url="" skinid="ht_noDisponible"/>
-    <hotspot pan="-198.42" description="&lt;b>Superficie:&lt;/b> 6.605 m² &#xa;&lt;b>Servidumbre:&lt;/b> 200 m² &#xa;&lt;b>Superficie Total:&lt;/b> 6.805 m²" target="_blank" id="33" tilt="-45.07" title="33" url="$60.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-201.75" description="&lt;b>Superficie:&lt;/b> 4.800 m² &#xa;&lt;b>Servidumbre:&lt;/b> 200 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.000 m²" target="_blank" id="32" tilt="-47.83" title="32" url="$50.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-206.16" description="&lt;b>Superficie:&lt;/b> 4.800 m² &#xa;&lt;b>Servidumbre:&lt;/b> 200 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.000 m²" target="_blank" id="31" tilt="-51.27" title="31" url="$50.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-210.67" description="&lt;b>Superficie:&lt;/b> 4.825 m² &#xa;&lt;b>Servidumbre:&lt;/b> 200 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.025 m²" target="_blank" id="30" tilt="-54.07" title="30" url="$50.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-217.27" description="&lt;b>Superficie:&lt;/b> 4.850 m² &#xa;&lt;b>Servidumbre:&lt;/b> 200 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.050 m²" target="_blank" id="29" tilt="-57.05" title="29" url="$50.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-223.96" description="&lt;b>Superficie:&lt;/b> 4.850 m² &#xa;&lt;b>Servidumbre:&lt;/b> 200 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.050 m²" target="_blank" id="28" tilt="-59.49" title="28" url="$50.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-233.26" description="&lt;b>Superficie:&lt;/b> 4.850 m² &#xa;&lt;b>Servidumbre:&lt;/b> 200 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.050 m²" target="_blank" id="27" tilt="-61.68" title="27" url="$50.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-243.72" description="&lt;b>Superficie:&lt;/b> 4.878 m² &#xa;&lt;b>Servidumbre:&lt;/b> 200 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.078 m²" target="_blank" id="26" tilt="-63.61" title="26" url="$50.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-57.7" description="&lt;b>Superficie:&lt;/b> 4.850 m² &#xa;&lt;b>Servidumbre:&lt;/b> 200 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.050 m²" target="_blank" id="75" tilt="-71.38" title="75" url="$55.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-255.31" description="&lt;b>Superficie:&lt;/b> 4.900 m² &#xa;&lt;b>Servidumbre:&lt;/b> 200 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.100 m²" target="_blank" id="25" tilt="-64.28" title="25" url="$50.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-19.82" description="&lt;b>Superficie:&lt;/b> 4.947 m² &#xa;&lt;b>Servidumbre:&lt;/b> 204 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.151 m²" target="_blank" id="73" tilt="-74.91" title="73" url="" skinid="ht_noDisponible"/>
-    <hotspot pan="-41.19" description="&lt;b>Superficie:&lt;/b> 4.850 m² &#xa;&lt;b>Servidumbre:&lt;/b> 200 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.050 m²" target="_blank" id="74" tilt="-73.6" title="74" url="$55.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-360" description="&lt;b>Superficie:&lt;/b> 4.387 m² &#xa;&lt;b>Servidumbre:&lt;/b> 907 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.294 m²" target="_blank" id="72" tilt="-74.04" title="72" url="$55.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-343.04" description="&lt;b>Superficie:&lt;/b> 4.846 m² &#xa;&lt;b>Servidumbre:&lt;/b> 753 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.599 m²" target="_blank" id="71" tilt="-71.1" title="71" url="" skinid="ht_noDisponible"/>
-    <hotspot pan="-332.48" description="&lt;b>Superficie:&lt;/b> 5.173 m² &#xa;&lt;b>Servidumbre:&lt;/b> 348 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.521 m²" target="_blank" id="70" tilt="-66.84" title="70" url="$55.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-316.91" description="&lt;b>Superficie:&lt;/b> 5.331 m² &#xa;&lt;b>Servidumbre:&lt;/b> 210 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.541 m²" target="_blank" id="69" tilt="-78.16" title="69" url="$55.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-126.36" description="3km" target="_blank" id="Point01" tilt="-6.59" title="Ñancul" url="1" skinid="ht_tag_background"/>
-    <hotspot pan="-83.11" description="9km" target="_blank" id="Point01" tilt="-2.47" title="Villarrica" url="2" skinid="ht_tag_background"/>
-    <hotspot pan="-70.06" description="" target="_blank" id="Point01" tilt="-0.28" title="Pucón - 35km" url="3" skinid="ht_tag_background"/>
-    <hotspot pan="-52.11" description="10km" target="_blank" id="Point01" tilt="-1.9" title="Lago Villarrica" url="4" skinid="ht_tag_background"/>
-    <hotspot pan="-262.82" description=" 85km" target="_blank" id="Point01" tilt="-2.95" title="Temuco" url="10" skinid="ht_tag_background"/>
-    <hotspot pan="-214.59" description="25 km" target="_blank" id="Point01" tilt="-3.97" title="Ruta 5" url="8" skinid="ht_tag_background"/>
-    <hotspot pan="-233.27" description="66km" target="_blank" id="Point01" tilt="-2.27" title="Aeropuerto Araucanía" url="9" skinid="ht_tag_background"/>
-    <hotspot pan="-107.23" description="56km" target="_blank" id="Point01" tilt="0.69" title="Coñaripe" url="6" skinid="ht_tag_background"/>
-    <hotspot pan="-133" description="66km" target="_blank" id="Point01" tilt="2.23" title="Panguipulli" url="7" skinid="ht_tag_background"/>
-    <hotspot pan="-90.06" description="Villarrica - Pitrufquen" target="_blank" id="Point01" tilt="-41.09" title="Ruta s65" url="" skinid="ht_tag_background"/>
-    <hotspot pan="-79.63" description="45km" target="_blank" id="Point01" tilt="5.26" title="Volcán Vilalrrica" url="" skinid="ht_tag_background"/>
-    <hotspot pan="-192.32" description="120 km" target="_blank" id="Point01" tilt="-0.08" title="Valdivia" url="" skinid="ht_tag_background"/>
-    <hotspot pan="-353.82" description="160 km" target="" id="Point01" tilt="1.79" title="Volcán Llaima" url="" skinid="ht_tag_background"/>
-    <hotspot pan="-2.35" description="70 km" target="_blank" id="Point01" tilt="-1.84" title="Cunco" url="" skinid="ht_tag_background"/>
-    <hotspot pan="-21.65" description="150 km" target="_blank" id="Point01" tilt="0.8" title="Icalma " url="" skinid="ht_tag_background"/>
-    <hotspot pan="-68.17" description="&lt;b>Superficie:&lt;/b> 4.905 m² &#xa;&lt;b>Servidumbre:&lt;/b> 288 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.193 m²" target="_blank" id="76" tilt="-67.88" title="76" url="$55.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-78.56" description="&lt;b>Superficie:&lt;/b> 4.855 m² &#xa;&lt;b>Servidumbre:&lt;/b> 232 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.087 m²" target="_blank" id="77" tilt="-64.54" title="77" url="$55.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-94.92" description="&lt;b>Superficie:&lt;/b> 5.377 m² &#xa;&lt;b>Servidumbre:&lt;/b> 465 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.842 m²" target="_blank" id="Point02" tilt="-70.48" title="78" url="$55.000.000" skinid="ht_disponible"/>
-    <hotspot pan="-69.95" description="&lt;b>Superficie:&lt;/b> 5.404 m² &#xa;&lt;b>Servidumbre:&lt;/b> 590 m² &#xa;&lt;b>Superficie Total:&lt;/b> 5.994 m²" target="_blank" id="Point02" tilt="-79.45" title="79" url="$55.000.000" skinid="ht_disponible"/>
+  <userdata latitude="-39.253471" info="" nodeid="node1" longitude="-72.314677" datetime="16/07/2023 14:27" tags="Fotos" copyright="" source="" title="Los Tordos" author="" comment="" customnodeid="" description=""/>
+  <hotspots wordwrap="1" height="20" width="180">
+    <label enabled="1" backgroundcolor="0xffffff" bordercolor="0x000000" backgroundalpha="1" wordwrap="1" height="20" textalpha="1" borderradius="1" background="1" textcolor="0x000000" border="1" width="180" borderalpha="1"/>
+    <polystyle backgroundcolor="0x0000ff" bordercolor="0x0000ff" backgroundalpha="0.25098" mode="0" handcursor="1" borderalpha="1"/>
+    <hotspot id="1" skinid="ht_noDisponible" tilt="-60.04" pan="-94.7" title="1" target="_blank" description="" url=""/>
+    <hotspot id="2" skinid="ht_noDisponible" tilt="-65.96" pan="-123.11" title="2" target="_blank" description="" url=""/>
+    <hotspot id="3" skinid="ht_noDisponible" tilt="-56.24" pan="-69.06" title="3" target="_blank" description="Superficie: 4.965 m² &#xa;Servidumbre: 196 m² &#xa;Superficie Total: 5.161 m²" url=""/>
+    <hotspot id="4" skinid="ht_disponible" tilt="-58.01" pan="-60.87" title="4" target="_blank" description="Superficie: 5.011 m² &#xa;Servidumbre: 156 m² &#xa;Superficie Total: 5.167 m²" url="$60.000.000"/>
+    <hotspot id="5" skinid="ht_disponible" tilt="-60.31" pan="-52.13" title="5" target="_blank" description="Superficie: 4.985 m² &#xa;Servidumbre: 176 m² &#xa;Superficie Total: 5.161 m²" url="$60.000.000"/>
+    <hotspot id="6" skinid="ht_disponible" tilt="-62.77" pan="-43.38" title="6" target="_blank" description="Superficie: 4.844 m² &#xa;Servidumbre: 200 m² &#xa;Superficie Total: 5.044 m²" url="$60.000.000"/>
+    <hotspot id="7" skinid="ht_noDisponible" tilt="-64.18" pan="-33.2" title="7" target="_blank" description="Superficie: 4.844 m² &#xa;Servidumbre: 200 m² &#xa;Superficie Total: 5.044 m²" url=""/>
+    <hotspot id="8" skinid="ht_noDisponible" tilt="-64.8" pan="-21.17" title="8" target="_blank" description="Superficie: 4.864 m² &#xa;Servidumbre: 204 m² &#xa;Superficie Total:5.068 m²" url=""/>
+    <hotspot id="9" skinid="ht_disponible" tilt="-64.28" pan="-9.49" title="9" target="_blank" description="Superficie: 4.321 m² &#xa;Servidumbre: 754 m² &#xa;Superficie Total: 5.075 m²" url="$60.000.000"/>
+    <hotspot id="10" skinid="ht_noDisponible" tilt="-61.88" pan="-356.35" title="10" target="_blank" description="Superficie: 4.593 m² &#xa;Servidumbre: 790 m² &#xa;Superficie Total: 5.383 m²" url=""/>
+    <hotspot id="11" skinid="ht_noDisponible" tilt="-60.02" pan="-347.37" title="11" target="_blank" description="Superficie 4.930 m² &#xa;Servidumbre: 204 m² &#xa;Superficie Total: 5.134 m²" url=""/>
+    <hotspot id="12" skinid="ht_disponible" tilt="-57.26" pan="-340.27" title="12" target="_blank" description="Superficie: 4.845 m² &#xa;Servidumbre:204 m² &#xa;Superficie Total: 5.049 m²" url="$60.000.000"/>
+    <hotspot id="13" skinid="ht_noDisponible" tilt="-54.58" pan="-333.34" title="13" target="_blank" description="Superficie: 4.845 m² &#xa;Servidumbre: 204 m² &#xa;Superficie Total: 5.049 m²" url=""/>
+    <hotspot id="14" skinid="ht_disponible" tilt="-51.56" pan="-328.31" title="14" target="_blank" description="Superficie:4.845 m² &#xa;Servidumbre 204 m² &#xa;Superficie Total: 5.049 m²" url="$60.000.000"/>
+    <hotspot id="15" skinid="ht_noDisponible" tilt="-48.49" pan="-323.58" title="15" target="_blank" description="Superficie: 4.845 m² &#xa;Servidumbre: 204 m² &#xa;Superficie Total: 5.049 m²" url=""/>
+    <hotspot id="16" skinid="ht_disponible" tilt="-45.51" pan="-319.85" title="16" target="_blank" description="Superficie: 4.845 m² &#xa;Servidumbre: 204 m² &#xa;Superficie Total: 5.049 m²" url="$60.000.000"/>
+    <hotspot id="17" skinid="ht_disponible" tilt="-42.93" pan="-318.13" title="17" target="_blank" description="Superficie: 5.127 m² &#xa;Servidumbre: 0 m² &#xa;Superficie Total: 5.127 m²" url="$65.000.000"/>
+    <hotspot id="18" skinid="ht_disponible" tilt="-49.75" pan="-312.48" title="18" target="_blank" description="Superficie: 4.821 m² &#xa;Servidumbre: 502 m² &#xa;Superficie Total: 5.323 m²" url="$50.000.000"/>
+    <hotspot id="19" skinid="ht_disponible" tilt="-52.65" pan="-308.69" title="19" target="_blank" description="Superficie: 4.900 m² &#xa;Servidumbre: 200 m² &#xa;Superficie Total: 5.100 m²" url="$50.000.000"/>
+    <hotspot id="20" skinid="ht_disponible" tilt="-55.71" pan="-303.46" title="20" target="_blank" description="Superficie: 4.900 m² &#xa;Servidumbre: 200 m² &#xa;Superficie Total: 5.100 m²" url="$50.000.000"/>
+    <hotspot id="21" skinid="ht_disponible" tilt="-58.45" pan="-296.99" title="21" target="_blank" description="Superficie: 4.900 m² &#xa;Servidumbre: 200 m² &#xa;Superficie Total: 5.100 m²" url="$50.000.000"/>
+    <hotspot id="22" skinid="ht_disponible" tilt="-60.97" pan="-288.66" title="22" target="_blank" description="Superficie:4.900 m² &#xa;Servidumbre: 200 m² &#xa;Superficie Total: 5.100 m²" url="$50.000.000"/>
+    <hotspot id="23" skinid="ht_disponible" tilt="-62.93" pan="-279.2" title="23" target="_blank" description="Superficie: 4.900 m² &#xa;Servidumbre :200 m² &#xa;Superficie Total: 5.100 m²" url="$50.000.000"/>
+    <hotspot id="24" skinid="ht_disponible" tilt="-64.18" pan="-267.89" title="24" target="_blank" description="Superficie: 4.900 m² &#xa;Servidumbre: 200 m² &#xa;Superficie Total: 5.100 m²" url="$50.000.000"/>
+    <hotspot id="50" skinid="ht_noDisponible" tilt="-69.51" pan="-214.68" title="50" target="_blank" description="Superficie: 4.800 m² &#xa;Servidumbre: 200 m² &#xa;Superficie Total: 5.000 m²" url=""/>
+    <hotspot id="49" skinid="ht_disponible" tilt="-65.84" pan="-205.92" title="49" target="_blank" description="Superficie: 4.800 m² &#xa;Servidumbre: 200 m² &#xa;Superficie Total 5.000 m²" url="$50.000.000"/>
+    <hotspot id="48" skinid="ht_noDisponible" tilt="-61.86" pan="-198.76" title="48" target="_blank" description="Superficie: 4.800 m² &#xa;Servidumbre: 200 m² &#xa;Superficie Total: 5.000 m²" url=""/>
+    <hotspot id="47" skinid="ht_disponible" tilt="-57.62" pan="-194.84" title="47" target="_blank" description="Superficie: 4.942 m² &#xa;Servidumbre: 276 m² &#xa;Superficie Total: 5.218 m²" url="$50.000.000"/>
+    <hotspot id="46" skinid="ht_disponible" tilt="-61.46" pan="-175.49" title="46" target="_blank" description="Superficie: 4.800 m² &#xa;Servidumbre: 200 m² &#xa;Superficie Total: 5.000 m²" url="$50.000.000"/>
+    <hotspot id="45" skinid="ht_disponible" tilt="-62.58" pan="-158.55" title="45" target="_blank" description="Superficie: 4.464 m² &#xa;Servidumbre: 576 m² &#xa;Superficie Total: 5.040 m²" url="$50.000.000"/>
+    <hotspot id="44" skinid="ht_disponible" tilt="-61.15" pan="-145.41" title="44" target="_blank" description="Superficie: 4.756 m² &#xa;Servidumbre: 284 m² &#xa;Superficie Total: 5.040 m²" url="$50.000.000"/>
+    <hotspot id="43" skinid="ht_disponible" tilt="-58.2" pan="-134.35" title="43" target="_blank" description="Superficie: 4.807 m² &#xa;Servidumbre: 284 m² &#xa;Superficie Total: 5.091 m²" url="$50.000.000"/>
+    <hotspot id="42" skinid="ht_disponible" tilt="-55.41" pan="-126.14" title="42" target="_blank" description="Superficie: 4.7320 m² &#xa;Servidumbre: 1.122 m² &#xa;Superficie Total: 5.854 m²" url="$50.000.000"/>
+    <hotspot id="41" skinid="ht_disponible" tilt="-51.56" pan="-136.72" title="41" target="_blank" description="Superficie: 4.850 m² &#xa;Servidumbre: 1.276 m² &#xa;Superficie Total: 6.126 m²" url="$50.000.000"/>
+    <hotspot id="51" skinid="ht_disponible" tilt="-72.55" pan="-229.31" title="51" target="_blank" description="Superficie: 4.800 m² &#xa;Servidumbre: 200 m² &#xa;Superficie Total: 5.000 m²" url="$50.000.000"/>
+    <hotspot id="52" skinid="ht_noDisponible" tilt="-74.35" pan="-247.54" title="52" target="_blank" description="Superficie:4.800 m² &#xa;Servidumbre: 200 m² &#xa;Superficie Total: 5.000 m²" url=""/>
+    <hotspot id="53" skinid="ht_disponible" tilt="-74.53" pan="-268.63" title="53" target="_blank" description="Superficie:4.800 m² &#xa;Servidumbre: 200 m² &#xa;Superficie Total: 5.000 m²" url="$50.000.000"/>
+    <hotspot id="54" skinid="ht_disponible" tilt="-72.87" pan="-287.48" title="54" target="_blank" description="Superficie: 4.800 m² &#xa;Servidumbre: 200 m² &#xa;Superficie Total: 5.000 m²" url="$50.000.000"/>
+    <hotspot id="55" skinid="ht_disponible" tilt="-69.85" pan="-301.13" title="55" target="_blank" description="Superficie: 4.800 m² &#xa;Servidumbre: 200 m² &#xa;Superficie Total: 5.000 m²" url="$50.000.000"/>
+    <hotspot id="56" skinid="ht_disponible" tilt="-65.9" pan="-310.35" title="56" target="_blank" description="Superficie: 4.800 m² &#xa;Servidumbre: 200 m² &#xa;Superficie Total: 5.000 m²" url="$50.000.000"/>
+    <hotspot id="57" skinid="ht_disponible" tilt="-62.08" pan="-317.12" title="57" target="_blank" description="Superficie: 4.800 m² &#xa;Servidumbre: 200 m² &#xa;Superficie Total: 5.000 m²" url="$50.000.000"/>
+    <hotspot id="58" skinid="ht_disponible" tilt="-57.78" pan="-320.62" title="58" target="_blank" description="Superficie: 4.792 m² &#xa;Servidumbre: 760 m² &#xa;Superficie Total: 5.552 m²" url="$50.000.000"/>
+    <hotspot id="68" skinid="ht_disponible" tilt="-83.74" pan="-101" title="68" target="_blank" description="Superficie: 4.824 m² &#xa;Servidumbre: 1.028 m² &#xa;Superficie Total: 5.852 m²" url="$50.000.000"/>
+    <hotspot id="67" skinid="ht_disponible" tilt="-78.75" pan="-131.55" title="67" target="_blank" description="Superficie: 4.095 m² &#xa;Servidumbre: 420 m² &#xa;Superficie Total: 5.515 m²" url="$50.000.000"/>
+    <hotspot id="66" skinid="ht_noDisponible" tilt="-74.13" pan="-143.86" title="66" target="_blank" description="Superficie: 4.941 m² &#xa;Servidumbre: 244 m² &#xa;Superficie Total: 5.185 m²" url=""/>
+    <hotspot id="65" skinid="ht_noDisponible" tilt="-69.06" pan="-149.88" title="65" target="_blank" description="Superficie: 4.660 m² &#xa;Servidumbre: 534 m² &#xa;Superficie Total: 5.194 m²" url=""/>
+    <hotspot id="64" skinid="ht_disponible" tilt="-66.1" pan="-178.94" title="64" target="_blank" description="Superficie: 4.800 m² &#xa;Servidumbre: 200 m² &#xa;Superficie Total:> 5.000 m²" url="$50.000.000"/>
+    <hotspot id="63" skinid="ht_noDisponible" tilt="-70.93" pan="-181.84" title="63" target="_blank" description="Superficie: 4.800 m² &#xa;Servidumbre: 200 m² &#xa;Superficie Total: 5.000 m²" url=""/>
+    <hotspot id="62" skinid="ht_noDisponible" tilt="-76.44" pan="-189.36" title="62" target="_blank" description="Superficie: 4.800 m² &#xa;Servidumbre: 200 m² &#xa;Superficie Total: 5.000 m²" url=""/>
+    <hotspot id="61" skinid="ht_disponible" tilt="-81.27" pan="-200.2" title="61" target="_blank" description="Superficie: 4.800 m² &#xa;Servidumbre: 200 m² &#xa;Superficie Total: 5.000 m²" url="$50.000.000"/>
+    <hotspot id="60" skinid="ht_noDisponible" tilt="-85.3" pan="-244.33" title="60" target="_blank" description="Superficie: 4.800 m² &#xa;Servidumbre: 200 m² &#xa;Superficie Total: 5.000 m²" url=""/>
+    <hotspot id="59" skinid="ht_disponible" tilt="-83.64" pan="-300" title="59" target="_blank" description="Superficie: 4.800 m² &#xa;Servidumbre: 200 m² &#xa;Superficie Total: 5.000 m²" url="$50.000.000"/>
+    <hotspot id="40" skinid="ht_disponible" tilt="-53.37" pan="-144.06" title="40" target="_blank" description="Superficie: 4.877 m² &#xa;Servidumbre: 486 m² &#xa;Superficie Total: 5.363 m²" url="$50.000.000"/>
+    <hotspot id="39" skinid="ht_noDisponible" tilt="-54.77" pan="-152.29" title="39" target="_blank" description="Superficie: 4.897 m² &#xa;Servidumbre: 486 m² &#xa;Superficie Total: 5.383 m²" url=""/>
+    <hotspot id="38" skinid="ht_noDisponible" tilt="-55.66" pan="-161.08" title="38" target="_blank" description="Superficie: 4.956 m² &#xa;Servidumbre: 885 m² &#xa;Superficie Total: 5.841 m²" url=""/>
+    <hotspot id="37" skinid="ht_disponible" tilt="-55.53" pan="-171.53" title="37" target="_blank" description="Superficie: 4.414 m² &#xa;Servidumbre: 878 m² &#xa;Superficie Total: 5.292 m²" url="$50.000.000"/>
+    <hotspot id="36" skinid="ht_disponible" tilt="-54.9" pan="-178.82" title="36" target="_blank" description="Superficie: 4.761 m² &#xa;Servidumbre: 393 m² &#xa;Superficie Total: 5.154 m²" url="$50.000.000"/>
+    <hotspot id="35" skinid="ht_disponible" tilt="-53.17" pan="-185.89" title="35" target="_blank" description="Superficie:5.458 m² &#xa;Servidumbre: 482 m² &#xa;Superficie Total: 5.940 m²" url="$50.000.000"/>
+    <hotspot id="34" skinid="ht_noDisponible" tilt="-50.85" pan="-191.95" title="34" target="_blank" description="Superficie:4.885 m² &#xa;Servidumbre: 898 m² &#xa;Superficie Total: 5.783 m²" url=""/>
+    <hotspot id="33" skinid="ht_disponible" tilt="-45.07" pan="-198.42" title="33" target="_blank" description="Superficie: 6.605 m² &#xa;Servidumbre: 200 m² &#xa;Superficie Total: 6.805 m²" url="$60.000.000"/>
+    <hotspot id="32" skinid="ht_disponible" tilt="-47.83" pan="-201.75" title="32" target="_blank" description="Superficie: 4.800 m² &#xa;Servidumbre: 200 m² &#xa;Superficie Total: 5.000 m²" url="$50.000.000"/>
+    <hotspot id="31" skinid="ht_disponible" tilt="-51.27" pan="-206.16" title="31" target="_blank" description="Superficie: 4.800 m² &#xa;Servidumbre: 200 m² &#xa;Superficie Total: 5.000 m²" url="$50.000.000"/>
+    <hotspot id="30" skinid="ht_disponible" tilt="-54.07" pan="-210.67" title="30" target="_blank" description="Superficie: 4.825 m² &#xa;Servidumbre: 200 m² &#xa;Superficie Total: 5.025 m²" url="$50.000.000"/>
+    <hotspot id="29" skinid="ht_disponible" tilt="-57.05" pan="-217.27" title="29" target="_blank" description="Superficie: 4.850 m² &#xa;Servidumbre: 200 m² &#xa;Superficie Total: 5.050 m²" url="$50.000.000"/>
+    <hotspot id="28" skinid="ht_disponible" tilt="-59.49" pan="-223.96" title="28" target="_blank" description="Superficie: 4.850 m² &#xa;Servidumbre: 200 m² &#xa;Superficie Total: 5.050 m²" url="$50.000.000"/>
+    <hotspot id="27" skinid="ht_disponible" tilt="-61.68" pan="-233.26" title="27" target="_blank" description="Superficie: 4.850 m² &#xa;Servidumbre: 200 m² &#xa;Superficie Total: 5.050 m²" url="$50.000.000"/>
+    <hotspot id="26" skinid="ht_disponible" tilt="-63.61" pan="-243.72" title="26" target="_blank" description="Superficie: 4.878 m² &#xa;Servidumbre: 200 m² &#xa;Superficie Total: 5.078 m²" url="$50.000.000"/>
+    <hotspot id="75" skinid="ht_disponible" tilt="-71.38" pan="-57.7" title="75" target="_blank" description="Superficie 4.850 m² &#xa;Servidumbre: 200 m² &#xa;Superficie Total: 5.050 m²" url="$55.000.000"/>
+    <hotspot id="25" skinid="ht_disponible" tilt="-64.28" pan="-255.31" title="25" target="_blank" description="Superficie: 4.900 m² &#xa;Servidumbre: 200 m² &#xa;Superficie Total: 5.100 m²" url="$50.000.000"/>
+    <hotspot id="73" skinid="ht_noDisponible" tilt="-74.91" pan="-19.82" title="73" target="_blank" description="Superficie: 4.947 m² &#xa;Servidumbre: 204 m² &#xa;Superficie Total: 5.151 m²" url=""/>
+    <hotspot id="74" skinid="ht_disponible" tilt="-73.6" pan="-41.19" title="74" target="_blank" description="Superficie: 4.850 m² &#xa;Servidumbre: 200 m² &#xa;Superficie Total: 5.050 m²" url="$55.000.000"/>
+    <hotspot id="72" skinid="ht_disponible" tilt="-74.04" pan="-360" title="72" target="_blank" description="Superficie: 4.387 m² &#xa;Servidumbre: 907 m² &#xa;Superficie Total: 5.294 m²" url="$55.000.000"/>
+    <hotspot id="71" skinid="ht_noDisponible" tilt="-71.1" pan="-343.04" title="71" target="_blank" description="Superficie: 4.846 m² &#xa;Servidumbre: 753 m² &#xa;Superficie Total: 5.599 m²" url=""/>
+    <hotspot id="70" skinid="ht_disponible" tilt="-66.84" pan="-332.48" title="70" target="_blank" description="Superficie: 5.173 m² &#xa;Servidumbre: 348 m² &#xa;Superficie Total: 5.521 m²" url="$55.000.000"/>
+    <hotspot id="69" skinid="ht_disponible" tilt="-78.16" pan="-316.91" title="69" target="_blank" description="Superficie: 5.331 m² &#xa;Servidumbre: 210 m² &#xa;Superficie Total: 5.541 m²" url="$55.000.000"/>
+    <hotspot id="Point01" skinid="ht_tag_background" tilt="-6.59" pan="-126.36" title="Ñancul" target="_blank" description="3km" url="1"/>
+    <hotspot id="Point01" skinid="ht_tag_background" tilt="-2.47" pan="-83.11" title="Villarrica" target="_blank" description="9km" url="2"/>
+    <hotspot id="Point01" skinid="ht_tag_background" tilt="-0.28" pan="-70.06" title="Pucón - 35km" target="_blank" description="" url="3"/>
+    <hotspot id="Point01" skinid="ht_tag_background" tilt="-1.9" pan="-52.11" title="Lago Villarrica" target="_blank" description="10km" url="4"/>
+    <hotspot id="Point01" skinid="ht_tag_background" tilt="-2.95" pan="-262.82" title="Temuco" target="_blank" description=" 85km" url="10"/>
+    <hotspot id="Point01" skinid="ht_tag_background" tilt="-3.97" pan="-214.59" title="Ruta 5" target="_blank" description="25 km" url="8"/>
+    <hotspot id="Point01" skinid="ht_tag_background" tilt="-2.27" pan="-233.27" title="Aeropuerto Araucanía" target="_blank" description="66km" url="9"/>
+    <hotspot id="Point01" skinid="ht_tag_background" tilt="0.69" pan="-107.23" title="Coñaripe" target="_blank" description="56km" url="6"/>
+    <hotspot id="Point01" skinid="ht_tag_background" tilt="2.23" pan="-133" title="Panguipulli" target="_blank" description="66km" url="7"/>
+    <hotspot id="Point01" skinid="ht_tag_background" tilt="-41.09" pan="-90.06" title="Ruta s65" target="_blank" description="Villarrica - Pitrufquen" url=""/>
+    <hotspot id="Point01" skinid="ht_tag_background" tilt="5.26" pan="-79.63" title="Volcán Vilalrrica" target="_blank" description="45km" url=""/>
+    <hotspot id="Point01" skinid="ht_tag_background" tilt="-0.08" pan="-192.32" title="Valdivia" target="_blank" description="120 km" url=""/>
+    <hotspot id="Point01" skinid="ht_tag_background" tilt="1.79" pan="-353.82" title="Volcán Llaima" target="" description="160 km" url=""/>
+    <hotspot id="Point01" skinid="ht_tag_background" tilt="-1.84" pan="-2.35" title="Cunco" target="_blank" description="70 km" url=""/>
+    <hotspot id="Point01" skinid="ht_tag_background" tilt="0.8" pan="-21.65" title="Icalma " target="_blank" description="150 km" url=""/>
+    <hotspot id="76" skinid="ht_disponible" tilt="-67.88" pan="-68.17" title="76" target="_blank" description="Superficie: 4.905 m² &#xa;Servidumbre: 288 m² &#xa;Superficie Total: 5.193 m²" url="$55.000.000"/>
+    <hotspot id="77" skinid="ht_disponible" tilt="-64.54" pan="-78.56" title="77" target="_blank" description="Superficie: 4.855 m² &#xa;Servidumbre: 232 m² &#xa;Superficie Total: 5.087 m²" url="$55.000.000"/>
+    <hotspot id="78" skinid="ht_disponible" tilt="-70.48" pan="-94.92" title="78" target="_blank" description="Superficie: 5.377 m² &#xa;Servidumbre: 465 m² &#xa;Superficie Total: 5.842 m²" url="$55.000.000"/>
+    <hotspot id="79" skinid="ht_disponible" tilt="-79.45" pan="-69.95" title="79" target="_blank" description="Superficie:5.404 m² &#xa;Servidumbre:590 m² &#xa;Superficie Total: 5.994 m²" url="$55.000.000"/>
   </hotspots>
   <media/>
-  <transition enabled="1" softedge="0" type="crossdissolve" blendtime="1" zoomspeed="2" zoomout="0" zoomfov="20" zoomin="0" zoomoutpause="1" blendcolor="0x000000"/>
-  <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
-  <control speedwheel="1" contextprojections="0" dblclickfullscreen="0" rubberband="0" lockedwheel="0" invertwheel="0" hideabout="0" lockedkeyboard="0" simulatemass="1" sensitivity="8" lockedkeyboardzoom="0" contextfullscreen="1" invertcontrol="1" lockedmouse="0"/>
+  <transition enabled="1" blendtime="1" type="crossdissolve" blendcolor="0x000000" zoomoutpause="1" zoomout="0" zoomfov="20" zoomin="0" softedge="0" zoomspeed="2"/>
+  <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
+  <control lockedwheel="0" invertcontrol="1" sensitivity="8" simulatemass="1" hideabout="0" rubberband="0" speedwheel="1" lockedmouse="0" contextprojections="0" invertwheel="0" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" lockedkeyboard="0"/>
 </panorama>
